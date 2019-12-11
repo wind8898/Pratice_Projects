@@ -1,0 +1,316 @@
+
+.section-1-container {
+    background-image: url("/Assets/header-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    min-height: 80vh;
+    z-index: -1000;
+}
+
+/* Section 1 container */
+
+.nav-container {
+    padding: 2rem;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar .navbar-expand-md .navbar-dark .bg-dark {
+    color: white;
+}
+
+.navbar-brand {
+    max-width: 250px !important;
+} 
+
+
+#navbar-toggler a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#navbar-toggler a:hover {
+    border-bottom: 3px solid red;
+}
+
+
+
+#navbar-toggler li {
+    padding: 0 1rem;
+}
+
+#navbar-toggler li:last-child {
+    padding-right: 4rem;
+}
+
+/* Section 1 text */
+
+.text-container {
+    padding: 4rem;
+}
+
+#section-1-image {
+    display: block;
+    margin-left: auto;
+    width:40%;
+    border-radius: 50%;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+}
+
+.section-1-text {
+    color: white;
+    margin-right: 4rem;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.dropdown-menu {
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: auto;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color:red;
+}
+
+/* background section */
+.background-section {
+    background-image: url(/Assets/Bg-lg-Toronto.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 40vh;
+    background-attachment: fixed;
+    }
+    
+/* end of background section */
+/* section 2 */
+
+.section-2-container {
+    margin-bottom: 4rem;
+}
+.section-2-image {
+    float:left;
+    max-width: 20%;
+    z-index: 100;
+    box-shadow: 5px 10px 20px black;
+    z-index: 10;
+    margin-left: 10rem;
+    margin-top: -8rem;
+
+}
+
+.section-2-text {
+    clear:both;
+    z-index: 1000;
+    margin-right: 4rem;
+    padding: 0 4rem;
+    position: relative;
+    top: -4rem;
+}
+
+
+.section-2-text h1 {
+    text-align: right;
+}
+.section-2-text hr {
+    height:5px; border:none; color:red; background-color:red; width:20%; margin: 1rem 0 2rem auto;
+}
+
+.section-2-text p {
+    text-align: justify;
+}
+
+.card-container {
+    padding: 0 4rem;
+    margin: 0 4rem;
+}
+
+.card-text-block h3 {
+    padding: 1rem 0 0 0;
+}
+
+.fa-chevron-circle-right {
+    color: red;
+    margin-bottom:1rem;
+}
+
+.card-text-block {
+    margin-bottom: 2rem;
+}
+
+/* end of secction 2 */
+
+/* Section 3 */
+
+.section-3-container {
+    background-image: linear-gradient(to bottom, white, #eeeeee);
+    min-height: 60vh;
+    padding: 2rem;;
+}
+
+.section-3-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-3-header hr {
+    height:5px; border:none; color:red; background-color:red; width:5%; margin: 2rem auto;
+}
+
+.section-3-header p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.tab-container {
+    margin: 4rem 4rem;
+    background-color: white;
+    padding-bottom: 2rem;
+}
+
+.nav-tabs {
+    border:0;
+}
+
+#nav-pill li {
+    padding: 1rem 1rem;
+}
+
+#nav-pill a {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0;
+    line-height: 2rem;
+    display: block;
+    box-shadow: 5px 5px 20px #888888;
+}
+
+#nav-pill a:hover {
+    background-color: white;
+    color: red;
+}
+
+.tab-content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.tab-content img {
+    padding: 1rem 0;
+}
+
+/* End of section 3 */
+/* senction 4 */
+
+.section-4-container {
+    padding: 6rem;
+}
+.section-4-container h1 {
+    color: #DA291C;
+}
+
+
+.icon-copy-container {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+}
+
+.icon {
+    width: 2.5rem;
+}
+
+.part-7-copy-1 h6, .part-7-copy-2 h6, .part-7-copy-3  h6{
+    color: #DA291C;
+}
+
+.part-7-copy-1, .part-7-copy-2, .part-7-copy-3 {
+    padding-right: 2rem;
+}
+
+.fas {
+    color: #DA291C;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    vertical-align:bottom;
+}
+
+/* End of section 4 */
+
+
+/* footer */
+
+footer {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 80px;
+    bottom: 0;
+    color: #fff;
+    margin-top:0;
+}
+
+.contactme {
+    line-height: 3rem;
+}
+
+.contactme i {
+    padding-right: 1rem;
+}
+
+/* end of footer */
+
+@media only screen and (max-width: 992px) {
+    .section-2-text {
+        margin-right: 4rem;
+        margin-top: 6rem;
+    }
+
+  }
+
+@media only screen and (max-width: 768px) {
+    .card-container {
+        margin: 0;
+    }
+
+    .section-3-header p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: left;
+    }
+
+    .section-3-header hr {
+        height:5px; border:none; color:red; background-color:red; width:10%; margin: 2rem auto;
+    }
+
+    .section-4-container {
+        padding: 4rem;
+    }
+
+
+}
+

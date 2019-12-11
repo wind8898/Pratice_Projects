@@ -1,0 +1,107 @@
+
+.section-1-container {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    min-height: 20vh;
+    z-index: -1000;
+}
+
+/* Section 1 container */
+
+.nav-container {
+    padding: 2rem;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar .navbar-expand-md .navbar-dark .bg-dark {
+    color: white;
+}
+
+.navbar-brand {
+    max-width: 250px !important;
+} 
+
+
+#navbar-toggler a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#navbar-toggler a:hover {
+    border-bottom: 3px solid red;
+}
+
+
+
+#navbar-toggler li {
+    padding: 0 1rem;
+}
+
+#navbar-toggler li:last-child {
+    padding-right: 4rem;
+}
+
+/* section 2 */
+
+.section-2-container {
+    background-color:#eeeeee;
+    min-height: 40vh;
+    padding: 4rem;
+    line-height: 1.5rem;
+
+}
+
+.section-2-copy hr {
+    height:5px; border:none; color:red; background-color:red; width:20%; margin:  2rem auto;
+}
+
+.section-2-copy p {
+    padding: 2rem 0;
+}
+
+/* footer */
+
+
+
+footer {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 80px;
+    bottom: 0;
+    color: #fff;
+    margin-top:0;
+}
+
+.contactme {
+    line-height: 3rem;
+}
+
+.contactme i {
+    padding-right: 1rem;
+}
+
+
+/*  comparison page */
+
+.image {
+    padding:1rem;
+}
+
+/* table page */
+
+table {
+    width: 100%;
+}

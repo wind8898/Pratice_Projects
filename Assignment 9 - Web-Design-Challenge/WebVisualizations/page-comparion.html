@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Steven Wang Personal Website">
+        <meta name="keywords" content="Steven Wang Data Science">
+        <meta name="author" content="Steven Wang">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- BootStrap CSS FrameWork  -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <!-- BootStrap jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+        <!-- Initial CSS -->
+        <link href="css/initial.css" ref="stylesheet" type="text/css">
+
+        <!-- Customerized CSS -->
+        <link href="css/page.css" rel="stylesheet" type="text/css">
+
+
+
+        <style>
+        </style>
+    </head>
+    <body>
+        <!-- Header Section 1 starts here -->
+            <div class="section-1-container">
+              <!-- section 1 navbar -->
+              <div class="nav-container">
+                  <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+                          <button class="navbar-toggler navbar-toggler-center" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon">   
+                                  </span>
+                          </button>
+                          <a href="index.html"><img class="navbar-brand" src="assets/logo.png"></a>
+                        
+                          <div class="collapse navbar-collapse" id="navbar-toggler">
+                            <ul class="navbar-nav ml-auto mt-4 mt-md-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                              </li>   
+                              <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Diagrams</a>
+                                <div class="dropdown-menu" data-reference="parent">
+                                  <a class="dropdown-item" href="page-1.html" target="_blank">Plot - Cloudiness</a>
+                                  <a class="dropdown-item" href="page-2.html" target="_blank">Plot - Humidity</a>
+                                  <a class="dropdown-item" href="page-3.html" target="_blank">Plot - Max_Temp</a>
+                                  <a class="dropdown-item" href="page-4.html" target="_blank">Plot - Wind_Speed</a>
+                                </div>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="page-comparion.html" target="_blank">Comparison</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="page-table.html" target="_blank">Data</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#Bonus">Bonus</a>
+                              </li>
+                            </ul>
+                          </div>
+                  </div>
+          </div>
+        <!-- End of Header Section 1 -->
+        <!-- section 2 starts here -->
+        <div class="section-2-container row">
+            <div class="section-2-copy text-center">
+                <h1>Comparison Plot</h1>
+                <hr>
+                <div class="row">
+                <img class="image col-12 col-md-6 col-lg-3" src="Assets/Cloudiness_vs_Latitude.png">
+                <img class="image col-12 col-md-6 col-lg-3" src="Assets/Humidity_vs_Latitude.png">
+                <img class="image col-12 col-md-6 col-lg-3" src="Assets/Max_Temp_vs_Latitude.png">
+                <img class="image col-12 col-md-6 col-lg-3" src="Assets/Wind_Speed_vs_Latitude.png">
+              </div>
+                <p class="text-left">From the comparison diagram, we can see a comprehensive realtionship between latitude and the other 4 factors. And from the observation, latitude has a correlation with humidity and max temperature but no obivious correlation with cloudiness and wind speed across different 500 cities worldwidely.</p>
+            </div>
+
+        </div>
+
+        <!-- end of section 2 -->
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 text-left">
+                    <img class="navbar-brand" src="assets/logo.png">
+                </div>
+                <div class="col-sm-6 col-md-4 contactme">
+                    <div>
+                        <i class="fa fa-map-marker footer-contacts-icon"></i>
+                        <span>North York, Toronto</span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone footer-contacts-icon"></i>
+                        <span> +1 647-666-8888</span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope footer-contacts-icon"></i>
+                        <span><a href="mailto:wind8898@hotmail.com" target="_blank">wind8898@hotmail.com</a></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>About the website</h4>
+                    <p> This website is for Data Class Demonstration only. Copyright © 2019 Steven Wang</p> 
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </body>
+</html>

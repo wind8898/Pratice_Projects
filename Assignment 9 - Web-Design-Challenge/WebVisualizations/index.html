@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Steven Wang Personal Website">
+        <meta name="keywords" content="Steven Wang Data Science">
+        <meta name="author" content="Steven Wang">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- BootStrap CSS FrameWork  -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <!-- BootStrap jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        
+        <!-- Animated CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+        <!-- Initial CSS -->
+        <link href="css/initial.css" ref="stylesheet" type="text/css">
+
+        <!-- Customerized CSS -->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+
+        <style>
+        </style>
+    </head>
+    <body>
+        <!-- Header Section 1 starts here -->
+            <div class="section-1-container">
+              <!-- section 1 navbar -->
+                <div class="nav-container">
+                        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <button class="navbar-toggler navbar-toggler-center" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon">   
+                                        </span>
+                                </button>
+                                <a href="index.html"><img class="navbar-brand" src="assets/logo.png"></a>
+                              
+                                <div class="collapse navbar-collapse" id="navbar-toggler">
+                                  <ul class="navbar-nav ml-auto mt-4 mt-md-0">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" href="index.html">Home</a>
+                                    </li>   
+                                    <li class="nav-item">
+                                      <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                      href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                      Diagrams</a>
+                                      <div class="dropdown-menu" data-reference="parent">
+                                        <a class="dropdown-item" href="page-1.html" target="_blank">Plot - Cloudiness</a>
+                                        <a class="dropdown-item" href="page-2.html" target="_blank">Plot - Humidity</a>
+                                        <a class="dropdown-item" href="page-3.html" target="_blank">Plot - Max_Temp</a>
+                                        <a class="dropdown-item" href="page-4.html" target="_blank">Plot - Wind_Speed</a>
+                                      </div>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="page-comparion.html" target="_blank">Comparison</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="page-table.html" target="_blank">Data</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="#Bonus">Bonus</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                        </div>
+                </div>
+                <!-- Section 1 text -->
+                <div class="text-container row d-flex flex-column" id="diagrams">
+                  <div class="col-12 col-md-6 col-lg-4 ml-auto">
+                    <img class="img-fluid animated rotateIn delay-1s" id="section-1-image" src="/Assets/Steven.JPG">
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 ml-auto section-1-text">
+                     <p class="animated zoomIn delay-1s">Welcome to Steven's Data analytics wesbite. The first part of the website, I am going to use the weather data across 500 different cities to built the plots under 4 circumstances. The second part of the website, I am going to use another couple diagrams to demostrate the dataset. The purpose of this website is to give simple illustration of the class teaching. If you have question, feel free to contact me anytime.</p> 
+                  </div>
+                </div>
+            </div>
+
+        <!-- End of Header Section 1 -->
+        <!-- Section 2 starts here -->
+          <div class="section-2-container" id="diagrams"> 
+              <div class="section-2-image d-none d-lg-block">
+                  <img class="img-fluid animated fadeInUp" src="Assets/section-1-logo.jpg">
+              </div>
+              <div class="section-2-text d-flex flex-column ml-auto col-12 col-md-6 col-lg-4 clearfix">
+                <h1>Visulaztion</h1>
+                <hr>
+                <p>In this example, we are creating a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. I have built a series of scatter plots to showcase the following relationships:</p>
+                <ol>
+                  <li>Temperature (F) vs. Latitude</li>
+                  <li>Humidity (%) vs. Latitude</li>
+                  <li>Cloudiness (%) vs. Latitude</li>
+                  <li>Wind Speed (mph) vs. Latitude</li>
+                </ol>
+              </div>
+            
+            <div class="card-container">
+                <!-- <div class="card-container-intro">
+                    <h2 class="text-center">Latest Articles</h2>
+                    <p class="text-muted text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.  </p>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-3 card-text-block">
+                        <a href="page-1.html" target="_blank"><img class="img-fluid" src="Assets/Cloudiness_vs_Latitude.png"></a>
+                        <h3>Plot 1</h3>
+                        <p class="text-secondary">Cloudiness_vs_Latitude</p>
+                        <a class="h4" href="page-1.html" target="_blank"><i class="fas fa-chevron-circle-right"></i></a>
+                      </div>
+                    <div class="col-md-3 card-text-block">
+                        <a href="page-2.html" target="_blank"><img class="img-fluid" src="Assets/Humidity_vs_Latitude.png"></a>
+                        <h3>Plot 2</h3>
+                        <p class="text-secondary">Humidity_vs_Latitude</p>
+                        <a class="h4" href="page-2.html" target="_blank"><i class="fas fa-chevron-circle-right"></i></a>
+                      </div>
+                    <div class="col-md-3 card-text-block">
+                        <a href="page-3.html" target="_blank"><img class="img-fluid" src="Assets/Max_Temp_vs_Latitude.png"></a>
+                        <h3>Plot 3</h3>
+                        <p class="text-secondary">Max_Temp_vs_Latitude</p>
+                        <a class="h4" href="page-3.html" target="_blank"><i class="fas fa-chevron-circle-right"></i></a>
+                      </div>
+                    <div class="col-md-3 card-text-block">
+                      <a href="page-4.html" target="_blank"><img class="img-fluid" src="Assets/Wind_Speed_vs_Latitude.png"></a>
+                      <h3>Plot 4</h3>
+                      <p class="text-secondary">Wind_Speed_vs_Latitude</p>
+                      <a class="h4" href="page-4.html" target="_blank"><i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                    <div class="col-md-6 card-text-block">
+                      <a href="page-comparion.html" target="_blank"><img class="img-fluid" src="Assets/comparison.jpg"></a>
+                      <h3>Comparison</h3>
+                      <p class="text-secondary">We are going to compare the above 4 diagrames to see the relationship between Latitude and Cloudiness, Humidity, Max Temperature and Wind Speed</p>
+                      <a class="h4" href="page-comparion.html" target="_blank"><i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                    <div class="col-md-6 card-text-block">
+                      <a href="page-table.html" target="_blank"><img class="img-fluid" src="Assets/table.jpg"></a>
+                      <h3>Data</h3>
+                      <p class="text-secondary">In this section, we are going to list all the raw data we have acesses from 500 different cities worldwidely</p>
+                      <a class="h4" href="page-table.html" target="_blank"><i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <!-- End of Section 2 -->
+        <!-- background section -->
+        <section class="background-section"></section>
+        <!-- end of background section -->
+        <!-- Section 3 starts here -->
+        <div class="section-3-container row" id="Bonus">
+            <div class="tab-container row col-12 col-md-10 ml-auto mr-auto">
+                <!-- section 3 header -->
+                <div class="section-3-header">
+                  <h1>Bonus</h1>
+                  <hr>
+                  <p style="font-weight: 500; font-size:1.2rem;">In this bonus section, I am going to repeat the Pymaceuticals analytics we have done in the past and explain what we have found in the plot.</p>
+                </div>
+                <!-- Nav tabs -->
+                <div class="col-12 col-md-4 col-lg-4 align-self-center ml-auto mr-auto"> 
+                <ul class="nav nav-tabs flex-column" id="nav-pill">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#home">Introduction</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#menu1">Tumor Response</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#menu2">Metastatic Spread</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#menu3">Survival During Treatment</a>
+                  </li>
+                </ul>
+                </div>
+              
+                <!-- Tab panes -->
+              <div class="col-12 col-md-8 col-lg-8 align-self-start">
+                <div class="tab-content">
+                  <div id="home" class="container tab-pane active"><br>
+                    <h3>Pymaceuticals Analytics</h3>
+                    <img class="img-fluid" src="/Assets/desk.jpg">
+                    <p>While your data companions rushed off to jobs in finance and government, you remained adamant that science was the way for you. Staying true to your mission, you've since joined Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego, CA. Pymaceuticals specializes in drug-based, anti-cancer pharmaceuticals. In their most recent efforts, they've since begun screening for potential treatments to squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.</p>
+                    <p>As their Chief Data Analyst, you've been given access to the complete data from their most recent animal study. In this study, 250 mice were treated through a variety of drug regimes over the course of 45 days. Their physiological responses were then monitored over the course of that time. Your objective is to analyze the data to show how four treatments (Capomulin, Infubinol, Ketapril, and Placebo) compare.</p>
+                   
+                  </div>
+                  <div id="menu1" class="container tab-pane fade"><br>
+                    <h3>Tumor Response to Treatment</h3>
+                    <img class="img-fluid" src="/Assets/tumor_response_to_treatment.png">
+                    <p>From the "Tumor Response to Treatment" diagram, we can see drug Capomulin has the best result. The tumors volume for the mice shrunk over times.</p>
+                  </div>
+                  <div id="menu2" class="container tab-pane fade"><br>
+                    <h3>Metastatic Spread During Treatment</h3>
+                    <img class="img-fluid" src="/Assets/metastic_spread_during_treatment.png">
+                    <p>From the "Metastatic Spread During Treatment" diagram, we can conclude that the mice taking the drug Capomulin had the lowest metastatic spread and Placebo had the fastest spread
+                      </p>
+                  </div>
+                 <div id="menu3" class="container tab-pane fade"><br>
+                  <h3>Survival During Treatment</h3>
+                  <img class="img-fluid" src="/Assets/survival_during_treatment.png">
+                  <p>From the "Survival During Treatment" diagram, we can see that the mice taking the drug Capomulin has the highest Survival rate. For the other drugs, especailly after 30 days, Infubinol drug has the lowest Survival rate.</p>
+                </div>
+             </div>
+             </div>
+        </div>
+        </div>
+        <!-- End of Section 3 -->
+        <!-- Contact Us -->
+        <!-- End of Contact Us -->
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 text-left">
+                    <img class="navbar-brand" src="assets/logo.png">
+                </div>
+                <div class="col-sm-6 col-md-4 contactme">
+                    <div>
+                        <i class="fa fa-map-marker footer-contacts-icon"></i>
+                        <span>North York, Toronto</span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone footer-contacts-icon"></i>
+                        <span> +1 647-666-8888</span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope footer-contacts-icon"></i>
+                        <span><a href="mailto:wind8898@hotmail.com" target="_blank">wind8898@hotmail.com</a></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>About the website</h4>
+                    <p> This website is for Data Class Demonstration only. Copyright © 2019 Steven Wang</p> 
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+
+
+
+
+
+
+        <!-- Script from here -->
+        <script>
+            $(document).ready(function(){
+              $(".nav-tabs a").click(function(){
+                $(this).tab('show');
+              });
+            });
+        </script>
+    </body>
+</html>
