@@ -3,6 +3,7 @@ import pandas as pd
 import time
 from bs4 import BeautifulSoup as bs
 from splinter import Browser
+import pymongo
 
 
 def scrape():
@@ -59,7 +60,8 @@ def scrape():
     tables = pd.read_html(Mars_Facts)
     df_Mars_Facts = tables[0]
     df_Mars_Facts.columns = ['Describtion', 'Value']
-    df_Mars_Facts.to_html('Mars_Facts.html', index=False)
+    df_Mars_Facts = df_Mars_Facts.set_index('Describtion')
+    df_Mars_Facts = df_Mars_Facts.to_dict()
     
     mars_data['Mars_Facts'] = df_Mars_Facts
     print(mars_data['Mars_Facts'])
@@ -95,6 +97,19 @@ def scrape():
     print(hemisphere_image_urls)
 
     return mars_data
+
+# export data to mongo db
+def export_mongo():
+
+    mars_data = scrape()
+
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["mars_db"] 
+    mars_collection = mydb['mars_collection']
+    
+    x = mars_collection.insert_one(mars_data)
+
+    print(x.inserted_ids)
 
 if __name__=="__main__":
     scrape()
