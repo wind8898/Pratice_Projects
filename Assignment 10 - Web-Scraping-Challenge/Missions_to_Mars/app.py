@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/scrape")
 def execute_scrape():
-    scrape_mars()
+    return scrape_mars.scrape()
 
 @app.route("/")
 def render_html():

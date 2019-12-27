@@ -28,8 +28,8 @@
         <!-- header section starts -->
         <section class="header">
             <div class="header-copy text-center">
-                <h1>Mission to Mars</h1>
-                <a href="/scrape"><button class="button">Scrape New Data</button></a>
+                <h1 class="pb-4">Mission to Mars</h1>
+                <a href="/scrape"><button class="btn btn-primary">Scrape New Data</button></a>
             </div>
         </section>
         <!-- header section ends -->
@@ -55,9 +55,11 @@
                     </div>
                     <div class="mars_facts">
                         <h4>Mars Facts</h4>
-                        <p>
-                            {{ mars_data['Mars_Facts']['Value'] }}
-                        </p>
+                        <ul class="list-group">
+                            {% for item in mars_data['Mars_Facts']['Value'].items() %}
+                            <li class="list-group-item">{{item[0]}} {{item[1]}}</li>
+                            {% endfor %}
+                        </ul>
 
                     </div>
                 </div>
@@ -65,8 +67,8 @@
         </section>
         <!-- sction-2 ends -->
         <!-- section-3 mars images -->
-        <section class="container section-3">
-            <h3>Mars Hemispheres</h3>
+        <section class="container section-3 mt-4">
+            <h3 class="text-center">Mars Hemispheres</h3>
             <div class="card-deck">
                 <div class="card">
                   <div class="card-body">
