@@ -1,19 +1,24 @@
 from flask import Flask, render_template
+import pymongo
 import scrape_mars
-
-mars_date = scrape_mars.scrape()
-print(mars_date)
 
 app = Flask(__name__)
 
 @app.route("/scrape")
-def echo_scrape():
-    result = scrape_mars.scrape()
-    print(result)
+def execute_scrape():
+    scrape_mars()
 
 @app.route("/")
-def echo():
-    return render_template("index.html")
+def render_html():
+    # extract data from local mongodb 
+    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    mydb = myclient["mars_db"] 
+    mars_collection = mydb['mars_collection']
+    mars_data = mars_collection.find_one()  
+
+    # render html 
+    return render_template("index.html", mars_data=mars_data)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
