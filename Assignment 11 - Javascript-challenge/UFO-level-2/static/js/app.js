@@ -25,22 +25,22 @@ button.on('click', function(){
             condition.push(input[i])
         }
     }
-
+    // check the condition
     console.log(condition)
     
     
-    // filter date with the condition
+    // filter date with the condition above
 
     var filteredDate = [];
 
     for (var i=0; i < tableData.length; i++) {
         var allvalue = Object.values(tableData[i]);
-        if (condition.forEach(x => tableData[i].includes(x))) {
+        if (condition.every(element => allvalue.indexOf(element) > -1)) {
             filteredDate.push(tableData[i])
         }
         
     }
-    
+    // check the filteredDate
     console.log(filteredDate)
 
     // output the result to the table
