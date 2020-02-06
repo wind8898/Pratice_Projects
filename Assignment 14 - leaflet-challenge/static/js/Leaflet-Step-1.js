@@ -60,6 +60,7 @@ d3.json(earthquake_url, function(data){
         });
         return div;
     };
+    
     legend.addTo(map);
 
 })

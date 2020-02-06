@@ -121,36 +121,54 @@ d3.json(earthquake_url, function(data){
           }).addTo(faultLine)
         })
       
-        // color function to be used when creating the legend
-        function getColor(d) {
-          return d > 5 ? '#ff3333' :
-                 d > 4  ? '#ff6633' :
-                 d > 3  ? '#ff9933' :
-                 d > 2  ? '#ffcc33' :
-                 d > 1  ? '#ffff33' :
-                          '#ccff33';
-        }
+        function fillScale(mag) {
+          switch(true) {
+              case mag < 1:
+                  return '#CCFF33';
+                  break;
+              case mag < 2:
+                  return '#FFFF33';
+                  break;
+              case mag < 3:
+                  return '#FFCC33';
+                  break;
+              case mag < 4:
+                  return '#FF9933';
+                  break;
+              case mag < 5:
+                  return '#FF6633';
+                  break;
+              default:
+                  return '#FF3333';
+          }
+      }
+  
+      data.features.forEach(d => {
+          L.circleMarker([d.geometry.coordinates[1], d.geometry.coordinates[0]], {
+              fillOpacity: 0.9,
+              color: 'black',
+              weight: 1,
+              fillColor: fillScale(d.properties.mag),
+              radius: d.properties.mag * 7
+          }).bindPopup("Magnitude: " + d.properties.mag
+                          + "<br>Location: " + d.properties.place).addTo(map);
+      });
+  
+      var legend = L.control({ position: 'bottomright'});
+      legend.onAdd = function() {
+          var div = L.DomUtil.create('div', 'info legend');
+          var limits = [0, 1, 2, 3, 4, 5];
+          
+          limits.forEach((l, i) => {
+              div.innerHTML +=  '<i style="background-color:' + fillScale(l) + '"></i> '
+              + l + (limits[i + 1] ? '&ndash;' + limits[i + 1] + '<br>' : '+');
+          });
+          return div;
+      };
       
-      // Add legend to the map
-        var legend = L.control({position: 'bottomright'});
-        
-        legend.onAdd = function (map) {
-        
-            var div = L.DomUtil.create('div', 'info legend'),
-                mags = [0, 1, 2, 3, 4, 5],
-                labels = [];
+      legend.addTo(map);
       
-                
-            for (var i = 0; i < mags.length; i++) {
-                div.innerHTML +=
-                    '<i style="background:' + getColor(mags[i] + 1) + '"></i> ' +
-                    mags[i] + (mags[i + 1] ? '&ndash;' + mags[i + 1] + '<br>' : '+');
-            }
-        
-            return div;
-        };
-        
-        legend.addTo(myMap);}
+      }
 
 
         createFeatures(data.features);
