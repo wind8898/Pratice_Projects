@@ -16,7 +16,7 @@ d3.json(earthquake_url, function(data){
     accessToken: API_KEY
     }).addTo(map);
 
-    function fillScale(mag) {
+    function colorScale(mag) {
         switch(true) {
             case mag < 1:
                 return '#CCFF33';
@@ -43,19 +43,19 @@ d3.json(earthquake_url, function(data){
             fillOpacity: 0.9,
             color: 'black',
             weight: 1,
-            fillColor: fillScale(d.properties.mag),
+            fillColor: colorScale(d.properties.mag),
             radius: d.properties.mag * 7
         }).bindPopup("Magnitude: " + d.properties.mag
                         + "<br>Location: " + d.properties.place).addTo(map);
     });
 
     var legend = L.control({ position: 'bottomright'});
-    legend.onAdd = function() {
+        legend.onAdd = function() {
         var div = L.DomUtil.create('div', 'info legend');
         var limits = [0, 1, 2, 3, 4, 5];
         
         limits.forEach((l, i) => {
-            div.innerHTML +=  '<i style="background-color:' + fillScale(l) + '"></i> '
+            div.innerHTML +=  `<i style="background-color:${colorScale(l)}"></i>`
             + l + (limits[i + 1] ? '&ndash;' + limits[i + 1] + '<br>' : '+');
         });
         return div;

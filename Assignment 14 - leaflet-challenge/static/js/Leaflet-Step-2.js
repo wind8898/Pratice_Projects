@@ -49,6 +49,8 @@ d3.json(earthquake_url, function(data){
           },
           onEachFeature: onEachFeature
         });
+
+        
       
         createMap(earthquakes);
       }
@@ -120,53 +122,6 @@ d3.json(earthquake_url, function(data){
             }
           }).addTo(faultLine)
         })
-      
-        function fillScale(mag) {
-          switch(true) {
-              case mag < 1:
-                  return '#CCFF33';
-                  break;
-              case mag < 2:
-                  return '#FFFF33';
-                  break;
-              case mag < 3:
-                  return '#FFCC33';
-                  break;
-              case mag < 4:
-                  return '#FF9933';
-                  break;
-              case mag < 5:
-                  return '#FF6633';
-                  break;
-              default:
-                  return '#FF3333';
-          }
-      }
-  
-      data.features.forEach(d => {
-          L.circleMarker([d.geometry.coordinates[1], d.geometry.coordinates[0]], {
-              fillOpacity: 0.9,
-              color: 'black',
-              weight: 1,
-              fillColor: fillScale(d.properties.mag),
-              radius: d.properties.mag * 7
-          }).bindPopup("Magnitude: " + d.properties.mag
-                          + "<br>Location: " + d.properties.place).addTo(map);
-      });
-  
-      var legend = L.control({ position: 'bottomright'});
-      legend.onAdd = function() {
-          var div = L.DomUtil.create('div', 'info legend');
-          var limits = [0, 1, 2, 3, 4, 5];
-          
-          limits.forEach((l, i) => {
-              div.innerHTML +=  '<i style="background-color:' + fillScale(l) + '"></i> '
-              + l + (limits[i + 1] ? '&ndash;' + limits[i + 1] + '<br>' : '+');
-          });
-          return div;
-      };
-      
-      legend.addTo(map);
       
       }
 
